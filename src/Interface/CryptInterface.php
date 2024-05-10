@@ -9,16 +9,12 @@ namespace App\Interface;
 interface CryptInterafe
 {
     /**
-     * @param array $word
-     * @param array $rootWord
      * @return array
      */
-    public function getKey(array $word, array $rootWord): array;
+    public function getKey(): array;
 
     /**
-     * @param array $word
-     * @param array $rootWord
      * @return string
      */
-    public function getWordReversed(array $word, array $rootWord): string;
+    public function getWordReversed(): string;
 }
