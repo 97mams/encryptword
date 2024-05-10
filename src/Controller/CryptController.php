@@ -11,29 +11,40 @@ use App\Interface\CryptInterafe;
 class CryptController implements CryptInterafe
 {
 
-    private string $word;
     private const ROOTWORD = 'abcdefghijklmnopqrstuvwxyz';
 
-    public function __construct()
-    {
+    public function __construct(
+        private string $word
+    ) {
     }
 
-    public function getKey(array $word, array $rootWord): array
+    public function getKey(): array
     {
-        $tab = [];
+        $word = str_split($this->word);
+        $alphabet = str_split(self::ROOTWORD);
+        $alphabetArrayKey = [];
         for ($i = 0; $i < count($word); $i++) {
-            for ($y = 0; $y < count($alph); $y++) {
-                if ($word[$i] === $alph[$y]) {
-                    $tab[] = $y;
+            for ($y = 0; $y < count($alphabet); $y++) {
+                if ($word[$i] === $alphabet[$y]) {
+                    $alphabetArrayKey[] = $y;
                 }
             }
         }
 
-        return $tab;
+        return $alphabetArrayKey;
     }
 
-    public function getWordReversed(array $word, array $rootWord): string
+    public function getWordReversed(): string
     {
-        return '';
+        $alphabetRevese = array_reverse(str_split(self::ROOTWORD));
+        $wordReverse = [];
+        for ($i = 0; $i < count($alphabetRevese); $i++) {
+            foreach ($alphabetRevese as $key => $value) {
+                if ($alphabetRevese[$i] === $key) {
+                    $wordReverse[] = $value;
+                }
+            }
+        }
+        return implode($wordReverse);
     }
 }
