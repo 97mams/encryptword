@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-$word = readline("entrez un mot");
+$word = readline("entrez un mot : ");
 
 
 if (!(int)$word) {
