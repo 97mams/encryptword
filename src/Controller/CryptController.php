@@ -2,13 +2,13 @@
 
 namespace App\Controller;
 
-use App\Interface\CryptInterafe;
+use App\Interface\CryptInterface;
 
 /**
  *  reverse and mask a character string
  * @auther anjaniainamamisoa@gmail.com
  */
-class CryptController implements CryptInterafe
+class CryptController implements CryptInterface
 {
 
     private const ROOTWORD = 'abcdefghijklmnopqrstuvwxyz';

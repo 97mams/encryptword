@@ -6,7 +6,7 @@ namespace App\Interface;
  * interface for crypt word
  * @auther anjanianamamisoa@gmail.com
  */
-interface CryptInterafe
+interface CryptInterface
 {
     /**
      * @return array
