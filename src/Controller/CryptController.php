@@ -39,9 +39,9 @@ class CryptController implements CryptInterface
         $alphabetRevese = array_reverse(str_split(self::ROOTWORD));
         $keyWord = $this->getKey();
         $wordReverse = [];
-        for ($i = 0; $i < count($alphabetRevese); $i++) {
+        for ($i = 0; $i < count($keyWord); $i++) {
             foreach ($alphabetRevese as $key => $value) {
-                if ($keyWord[$i] === $key) {
+                if ($key === $keyWord[$i]) {
                     $wordReverse[] = $value;
                 }
             }
