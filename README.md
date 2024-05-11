@@ -1,4 +1,4 @@
-# Crypt word
+# encrypt word
 
 This mini-project is a simple calculator implemented in PHP, designed to be run through the PHP Command-Line Interface (CLI).
 
