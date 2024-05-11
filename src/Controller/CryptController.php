@@ -37,10 +37,11 @@ class CryptController implements CryptInterafe
     public function getWordReversed(): string
     {
         $alphabetRevese = array_reverse(str_split(self::ROOTWORD));
+        $keyWord = $this->getKey();
         $wordReverse = [];
         for ($i = 0; $i < count($alphabetRevese); $i++) {
             foreach ($alphabetRevese as $key => $value) {
-                if ($alphabetRevese[$i] === $key) {
+                if ($keyWord[$i] === $key) {
                     $wordReverse[] = $value;
                 }
             }
