@@ -1,6 +1,6 @@
 # encrypt word
 
-This mini-project is a simple calculator implemented in PHP, designed to be run through the PHP Command-Line Interface (CLI).
+This mini-project is dedicated to hiding a word.
 
 ## Get started
 
