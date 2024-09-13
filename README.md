@@ -1,6 +1,6 @@
 # encrypt word
 
-This mini-project is dedicated to hiding a word.
+This mini-project is dedicated to hiding a word in the command line.
 
 ## Get started
 
